@@ -23,8 +23,10 @@ package com.monstrofil
             if (param2.avatarId != 0)
             {
                 var player:Player = gameInfoHolder.mapPlayers[param2.avatarId];
-                var playerInfoStr:String = player.name + " (" + player.shipShortName + ")";
-                param2.message = param2.message.replace(player.name, playerInfoStr);
+                var playerInfoStr:String = player.name + " (" + player.shipName + ")";
+                if(param2.message.indexOf(player.shipName) == -1) {
+                    param2.message = param2.message.replace(player.name, playerInfoStr);
+                }
             }
             super.handleAddChatMessage(param1, param2);
         

@@ -27,7 +27,7 @@ for i in doc.documentElement.childNodes:
     if i.nodeName == 'controllers':        
         for controller in [k for k in i.childNodes if k.nodeName == 'controller']:
             if controller._attrs.get('class', None).childNodes[0].nodeValue == 'lesta.dialogs.battle_window_controllers.ComplainController':
-                controller._attrs['class'] = 'com.monstrofil.ComplainController'
+                controller.setAttribute('class', 'com.monstrofil.ComplainController')
         
         
 with open(FILE_PATH, 'w') as f:

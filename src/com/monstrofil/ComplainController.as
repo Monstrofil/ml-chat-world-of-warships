@@ -9,7 +9,7 @@ package com.monstrofil
      * ...
      * @author Monstrofil
      */
-    public class ComplainController extends ComplainController
+    public class ComplainController extends lesta.dialogs.battle_window_controllers.ComplainController
     {
         
         public function ComplainController()

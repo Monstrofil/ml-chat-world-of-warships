@@ -2,6 +2,7 @@ package com.monstrofil
 {
     import lesta.components.Plane;
     import lesta.controls.MessageListItemRenderer;
+    import lesta.cpp.Translator;
     import lesta.dialogs.battle_window_controllers.ComplainController;
     import lesta.structs.Player;
     
@@ -23,8 +24,8 @@ package com.monstrofil
             if (param2.avatarId != 0)
             {
                 var player:Player = gameInfoHolder.mapPlayers[param2.avatarId];
-                var playerInfoStr:String = player.name + " (" + player.shipName + ")";
-                if(param2.message.indexOf(player.shipName) == -1) {
+                var playerInfoStr:String = player.name + " (" + Translator.translate(player.shipName) + ")";
+                if(param2.message.indexOf(playerInfoStr) == -1) {
                     param2.message = param2.message.replace(player.name, playerInfoStr);
                 }
             }

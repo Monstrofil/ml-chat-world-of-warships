@@ -24,7 +24,7 @@ package com.monstrofil
             if (param2.avatarId != 0)
             {
                 var player:Player = gameInfoHolder.mapPlayers[param2.avatarId];
-                var playerInfoStr:String = player.name + " (" + Translator.translate(player.shipName) + ")";
+                var playerInfoStr:String = player.name + " (" + Translator.translate(player.shipShortName) + ")";
                 if(param2.message.indexOf(playerInfoStr) == -1) {
                     param2.message = param2.message.replace(player.name, playerInfoStr);
                 }
